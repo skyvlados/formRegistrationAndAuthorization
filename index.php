@@ -1,19 +1,18 @@
 <?php
-
 require __DIR__ . '/auth.php';
 $login = getUserLogin();
+if ($login === null) {
+    header("Location: /login.php");
+    exit;
+}
 ?>
 <html>
 <head>
     <title>Главная страница</title>
 </head>
 <body>
-<?php if ($login === null): ?>
-    <a href="/login.php">Авторизуйтесь</a>
-<?php else: ?>
-    Добро пожаловать, <?= $login ?>
+    Добро пожаловать, <?php echo $login ?>
     <br>
     <a href="/logout.php">Выйти</a>
-<?php endif; ?>
 </body>
 </html>
