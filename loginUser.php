@@ -1,5 +1,5 @@
 <?php
-var_dump($_POST);
+//var_dump($_POST);
 //var_dump($_SERVER);
 if ($_SERVER["REQUEST_METHOD"]!=="POST") {
     http_response_code(405);
@@ -16,6 +16,7 @@ if (!empty($_POST)) {
         setcookie('password', $password, 0, '/');
         header('Location: /index.php');
     } else {
-        $error = 'Ошибка авторизации';
+        $error = 'Ошибка авторизации, нет такого юзера';
+        header('Location: /login.php');
     }
 }
