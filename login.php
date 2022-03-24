@@ -3,9 +3,9 @@
     <title>Форма авторизации</title>
 </head>
 <body>
-<?php if (isset($error)): ?>
-    <span style="color: red;">
-    <?php echo $error?>
+<?php if ($_GET["error"]==="user_not_found"): ?>
+<span style="color: red;">
+    Пользователь не найден!
 </span>
 <?php endif; ?>
 <form action="/loginUser.php" method="post">

@@ -16,7 +16,6 @@ if (!empty($_POST)) {
         setcookie('password', $password, 0, '/');
         header('Location: /index.php');
     } else {
-        $error = 'Ошибка авторизации, нет такого юзера';
-        header('Location: /login.php');
+        header('Location: /login.php?error=user_not_found');
     }
 }
