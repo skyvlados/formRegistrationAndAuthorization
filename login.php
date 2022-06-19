@@ -3,9 +3,9 @@
     <title>Форма авторизации</title>
 </head>
 <body>
-<?php if (isset($error)): ?>
+<?php if (isset($_GET["error"])): ?>
     <span style="color: red;">
-    <?php echo $error?>
+    <?php echo $_GET["error"]?>
 </span>
 <?php endif; ?>
 <form action="/loginUser.php" method="post">

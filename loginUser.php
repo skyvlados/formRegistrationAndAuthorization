@@ -17,6 +17,6 @@ if (!empty($_POST)) {
         header('Location: /index.php');
     } else {
         $error = 'Ошибка авторизации, нет такого юзера';
-        header('Location: /login.php');
+        header('Location: /login.php?error='.$error);
     }
 }
