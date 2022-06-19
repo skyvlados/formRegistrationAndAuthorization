@@ -16,7 +16,7 @@ if (!empty($_POST)) {
         header('Location: /login.php');
     } else {
         $error = 'Заполните поля';
-        header('Location: /registration.php');
+        header('Location: /registration.php?error=fill_fields');
     }
 }
 

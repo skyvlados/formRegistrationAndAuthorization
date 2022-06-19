@@ -3,9 +3,9 @@
     <title>Форма Регистрации</title>
 </head>
 <body>
-<?php if (isset($error)): ?>
+<?php if ($_GET["error"]==="fill_fields"): ?>
     <span style="color: red;">
-    <?php echo $error ?>
+    Заполните поля Имя пользователя и Пароль!
 </span>
 <?php endif; ?>
 <form action="/registrationUser.php" method="post">

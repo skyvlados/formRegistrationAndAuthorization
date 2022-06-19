@@ -6,7 +6,7 @@
 <?php if (isset($_GET["error"])): ?>
     <span style="color: red;">
     <?php echo $_GET["error"]?>
-</span>
+    </span>
 <?php endif; ?>
 <form action="/loginUser.php" method="post">
     <label for="login">Имя пользователя: </label><input type="text" name="login" id="login">
